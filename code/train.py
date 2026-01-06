@@ -7,6 +7,7 @@ np.set_printoptions(
 
 i = int(0)
 
+# ---- Funciones de activación ----
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
@@ -28,6 +29,7 @@ def calculate(x):
     a3 = sigmoid(z3)
     return(a3)
 
+# ---- Datos de entrenamiiento ----
 X = np.array([
     [0, 0],
     [0, 1],
@@ -37,12 +39,14 @@ X = np.array([
 
 y = np.array([[0], [1], [1], [0]])
 
+# ---- Definir red ----
 np.random.seed(42)
 
 W1 = np.random.randn(2, 10)
 W2 = np.random.randn(10, 10)
 W3 = np.random.randn(10, 1)
 
+# ---- Entrenamiento ----
 lr = 0.1
 epochs = 100000
 
@@ -80,6 +84,8 @@ i = 1
 
 print(calculate(X))
 input()
+
+# ---- Guardar pesos de la red ----
 with open("weights/pesos_W1.txt", "w") as f:
     f.write(str(W1))
 
