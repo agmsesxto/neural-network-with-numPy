@@ -1,9 +1,11 @@
 import numpy as np
 
+# ---- Definir red y cargar pesos ----
 W1 = np.load("./weights/W1.npy")
 W2 = np.load("./weights/W2.npy")
 W3 = np.load("./weights/W3.npy")
 
+# ---- Funciones de acivación ----
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
