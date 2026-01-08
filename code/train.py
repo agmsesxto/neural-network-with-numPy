@@ -29,7 +29,7 @@ def calculate(x):
     a3 = sigmoid(z3)
     return(a3)
 
-# ---- Datos de entrenamiiento ----
+# ---- Datos de entrenamiento ----
 X = np.array([
     [0, 0],
     [0, 1],
