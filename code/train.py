@@ -74,11 +74,11 @@ while i <= epochs:
     error1 = d2 @ W2.T
     d1 = error1 * sigmoid_deriv(a1)
     
-    # ---- Actualización de peso----
+    # ---- Actualización de los pesos ----
     W3 += a2.T @ d3 * lr
     W2 += a1.T @ d2 * lr
     W1 += X.T @ d1 * lr
-
+	# ---- Actualización de los bias ----
     B3 = np.sum(d3, axis=0, keepdims=True) * lr
     B2 = np.sum(d2, axis=0, keepdims=True) * lr
     B1 = np.sum(d1, axis=0, keepdims=True) * lr
